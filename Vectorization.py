@@ -12,6 +12,7 @@ c = np.dot(a, b)  # 进行向量点积运算(求和从1到最后的每一个a*b)
 toc = time.time()
 
 print("Vectorization version:" + str(1000 * (toc - tic)) + "ms")
+print(c)
 
 c = 0
 
@@ -20,5 +21,6 @@ for i in range(1000000):
     c += a[i] * b[i]
 toc = time.time()
 print("No-Vectorization version:" + str(1000 * (toc - tic)) + "ms")
+print(c)
 c = 0
 tic = time.time()
